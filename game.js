@@ -77,7 +77,7 @@ function moveLeft(element) {
 }
 //                       A U D I O
 var A = new Audio("source/Footsteps-in-grass-fast-www (mp3cut.net).mp3"); 
-var B= new Audio("/source/bkmusic.mp3"); 
+var B= new Audio("source/bkmusic.mp3"); 
 function startAnatural(){
     A.play();
 }
@@ -160,17 +160,17 @@ function picture(){
     var studentNumber=Math.floor(getRandomArbitrary(1,6));
     switch(studentNumber){
         case 1:
-            return '/source/student5.png';
+            return 'source/student5.png';
         case 2:
-            return '/source/student3.png';
+            return 'source/student3.png';
         case 3:
-            return '/source/student2.png';
+            return 'source/student2.png';
         case 4:
-            return '/source/student1.png';
+            return 'source/student1.png';
         case 5:
-            return '/source/student4.png';   
+            return 'source/student4.png';   
         case 6:
-        return    '/source/student5.png'; 
+        return    'source/student5.png'; 
     }
 }
  const arr=[];
@@ -208,7 +208,7 @@ function StudentMover(){
     var elStyle1 = window.getComputedStyle(thing);
     var tp=elStyle1.getPropertyValue("bottom").replace("px", "");
     var lf=elStyle1.getPropertyValue("left").replace("px", "");
-    if(thing.src.includes("/source/student4.png")){
+    if(thing.src.includes("source/student4.png")){
 
     }else{
     if(k%2==0){
@@ -246,16 +246,16 @@ function kill(){
     var leftValue1 = (Math.ceil(Math.floor(lf/100)*100));
         
         if(Numberkill==10 ||Numberkill==50||Numberkill==90 ||Numberkill==130){
-            document.getElementById('game').style.backgroundImage="url(/source/beach.jpg)";
+            document.getElementById('game').style.backgroundImage="url(source/beach.jpg)";
         }
         if(Numberkill==20 ||Numberkill==60||Numberkill==100 ||Numberkill==140){
-            document.getElementById('game').style.backgroundImage="url(/source/deck.jpg)";
+            document.getElementById('game').style.backgroundImage="url(source/deck.jpg)";
         }
         if(Numberkill==30 ||Numberkill==70||Numberkill==110 ||Numberkill==150){
-            document.getElementById('game').style.backgroundImage="url(/source/snow.jpg)";
+            document.getElementById('game').style.backgroundImage="url(source/snow.jpg)";
         }
         if(Numberkill==40 ||Numberkill==80||Numberkill==120 ||Numberkill==160){
-            document.getElementById('game').style.backgroundImage="url(/source/jungle.jpg)";
+            document.getElementById('game').style.backgroundImage="url(source/jungle.jpg)";
         }
     
     if((topValue1==tpValue || topValue1==tpValue-100 || topValue1==tpValue+100)&&(leftValue1==lftValue || leftValue1==lftValue-100 || leftValue1==lftValue+100)){     
@@ -266,13 +266,13 @@ function bloodfn(){
     var bloodNumber=Math.floor(getRandomArbitrary(1,4));
     switch(bloodNumber){
         case 1:
-            return '/source/blood.png';
+            return 'source/blood.png';
         case 2:
-            return '/source/blood2.png';
+            return 'source/blood2.png';
         case 3:
-            return '/source/blood3.png';
+            return 'source/blood3.png';
         case 4:
-            return '/source/blood4.png'; 
+            return 'source/blood4.png'; 
     }
 }
 var  blood = new Image(100, 100);
@@ -287,27 +287,27 @@ setTimeout(function() { blood.remove(); }, 10000);
 //                 crying
 var k=thing.src;
 
-        if(k.includes("/source/student5.png")){
-            var audio = new Audio('/source/mancrying.mp3');
+        if(k.includes("source/student5.png")){
+            var audio = new Audio('source/mancrying.mp3');
   audio.play();
         }
-        if(k.includes("/source/student2.png")){
-            var audio = new Audio('/source/mancrying2.mp3');
+        if(k.includes("source/student2.png")){
+            var audio = new Audio('source/mancrying2.mp3');
   audio.play();
         }
-        if(k.includes("/source/student4.png")){
-            var audio = new Audio('/source/girl1.mp3');
+        if(k.includes("source/student4.png")){
+            var audio = new Audio('source/girl1.mp3');
   audio.play();
         }
-        if(k.includes("/source/student3.png")){
-            var audio = new Audio('/source/girl2.mp3');
+        if(k.includes("source/student3.png")){
+            var audio = new Audio('source/girl2.mp3');
   audio.play();
         }
-        if(k.includes("/source/student1.png")){
-            var audio = new Audio('/source/girl3.mp3');
+        if(k.includes("source/student1.png")){
+            var audio = new Audio('source/girl3.mp3');
   audio.play();
         }
-        var eataudio = new Audio('/source/eat2.m4a');
+        var eataudio = new Audio('source/eat2.m4a');
   eataudio.play();
         thing.remove();
         Numberkill=Numberkill+1;
