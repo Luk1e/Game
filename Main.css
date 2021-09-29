@@ -4,7 +4,7 @@
 }
 
 #game{
-   background-image:url("/source/jungle.jpg");
+   background-image:url("source/jungle.jpg");
    width:98.5vw;
    height:97.5vh;
    border:1vh solid black;
