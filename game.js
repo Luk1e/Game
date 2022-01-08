@@ -1,3 +1,14 @@
+function chooseMenu() {
+    var width = window.innerWidth;
+    if (width < 1200) {
+        //Add your div
+    
+    }
+    else {
+        //If div is in document then remove, and add mobile div
+       
+       
+
 var helmut=document.getElementById('helmut');
 var height =window.screen.availHeight;
 var width=window.screen.availWidth;
@@ -10,7 +21,7 @@ function closeFunction() {
     if (settings.style.display !== "none") {
         settings.style.display = "none";
       } else {
-        settings.style.display = "block";
+        settings.style.display = "grid";
       }
   }
 const button2=document.querySelector('.sett-button');
@@ -180,7 +191,8 @@ function createStudent(){
     student.style.position='absolute';
     student.id=id.toString();
     student.src =picture();
-    document.body.appendChild(student);
+    var body=document.getElementById("main");
+    body.appendChild(student);
     positionRandomizer(student);
     arr.push(id);
     id=id+1;
@@ -257,6 +269,25 @@ function kill(){
         if(Numberkill==40 ||Numberkill==80||Numberkill==120 ||Numberkill==160){
             document.getElementById('game').style.backgroundImage="url(source/jungle.jpg)";
         }
+
+        //   Set Click Map
+
+        var jungle = document.getElementById("jungle");
+     jungle.onclick = function(event) {
+    document.getElementById('game').style.backgroundImage="url(source/jungle.jpg)";
+    }
+     var snow = document.getElementById("snow");
+    snow.onclick = function(event) {
+    document.getElementById('game').style.backgroundImage="url(source/snow.jpg)";
+    }
+    var deck = document.getElementById("deck");
+    deck.onclick = function(event) {
+    document.getElementById('game').style.backgroundImage="url(source/deck.jpg)";
+    }
+    var beach = document.getElementById("beach");
+    beach.onclick = function(event) {
+    document.getElementById('game').style.backgroundImage="url(source/beach.jpg)";
+    }   
     
     if((topValue1==tpValue || topValue1==tpValue-100 || topValue1==tpValue+100)&&(leftValue1==lftValue || leftValue1==lftValue-100 || leftValue1==lftValue+100)){     
    
@@ -279,7 +310,8 @@ var  blood = new Image(100, 100);
 
 blood.style.position='absolute';
 blood.src =bloodfn();
-document.body.appendChild(blood);
+var body=document.getElementById("main");
+body.appendChild(blood);
 blood.style.top=(height-tp-180)+'px';
 blood.style.left=lf+'px';
 setTimeout(function() { blood.remove(); }, 10000);
@@ -329,3 +361,8 @@ var k=thing.src;
 }
 
 
+
+}
+}
+chooseMenu();
+window.onresize = chooseMenu;
